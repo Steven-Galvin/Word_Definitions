@@ -1,9 +1,10 @@
 class Words
-  define_method(:initialize) do |word|
-    @word = word
-  end
+  attr_reader(:word, :id)
 
-  define_method(:word) do
-    @word
+  @@words_array = []
+
+  define_method(:initialize) do |attributes|
+    @word = attributes.fetch(:word)
+    @id = @@words_array.length().+(1)
   end
 end
