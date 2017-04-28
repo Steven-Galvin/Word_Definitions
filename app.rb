@@ -25,9 +25,14 @@ get('/word/:id') do
   erb(:word)
 end
 
-post('/add_definition') do
+post('/add-definition') do
   definition = params.fetch('definition')
   @word = Words.find(params.fetch("id"))
   @word.add_definition(definition)
   redirect("/word/#{@word.id()}")
+end
+
+post('/reset-words') do
+  Words.clear()
+  redirect('/')
 end

@@ -34,4 +34,8 @@ class Words
   define_method(:add_definition) do |definition|
     @definitions.push(definition)
   end
+
+  define_method(:clear_definitions) do
+    @definitions.clear()
+  end
 end

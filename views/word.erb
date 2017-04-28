@@ -1,15 +1,17 @@
-<h3>Here are the definitions you've made for <%= @word.word() %></h3>
-<ul>
-  <% @word.definitions().each() do |definition| %>
-    <li><%= definition %></li>
-  <% end %>
-</ul>
+<div class="well" id="second-page">
+  <h3>Here are the definitions you've made for <%= @word.word() %></h3>
+  <ul>
+    <% @word.definitions().each() do |definition| %>
+      <li><%= definition %></li>
+    <% end %>
+  </ul>
 
-<h3>Add a definition to <%= @word.word() %>!</h3>
-<form action="/add_definition" method="post">
-  <input name='id' type='hidden' value='<%= @word.id() %>'>
-  <label for="definition">Definition:</label>
-  <input id="definition" name="definition" type="text">
-  <hr>
-  <button type="submit" class="btn btn-success">Add Definition!</button>
-</form>
+  <h3>Add a definition to <%= @word.word() %>!</h3>
+  <form action="/add-definition" method="post">
+    <input name='id' type='hidden' value='<%= @word.id() %>'>
+    <label for="definition">Definition:</label>
+    <input id="definition" name="definition" type="text" required>
+    <hr>
+    <button type="submit" class="btn btn-success">Add Definition!</button>
+  </form>
+</div>

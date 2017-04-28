@@ -1,0 +1,31 @@
+body {
+  background-image: url("../img/background.jpg");
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input {
+  color: black;
+}
+
+.jumbotron#header {
+  background-color: rgba(193, 23, 23, 0.9);
+  color: white;
+  text-align: center;
+}
+
+#home-page {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 124, 124, 0.9);
+}
+
+#second-page {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 124, 124, 0.9);
+}
+
+ul {
+  list-style: circle;
+}

@@ -1,21 +1,24 @@
-<h3>Welcome to the word and definitions maker!</h3>
-<h5>Enter words and definitions below and I'll save them for you!</h5>
-<form action="/words" method="post">
-  <br>
-  <label for="word">Word:</label>
-  <input id="word" name="word" type="text">
-  <br>
-  <br>
-  <label for="definition">Definition:</label>
-  <input id="definition" name="definition" type="text">
-  <hr>
-  <button type="submit" class="btn btn-success">Add Word!</button>
-</form>
-
-<h3>Words:</h3>
-
-<ul>
+<div class="well" id="home-page">
+  <h3>Welcome to the word and definitions maker!</h3>
+  <h5>Enter words and definitions below and I'll save them for you!</h5>
+  <form action="/words" method="post">
+    <br>
+    <label for="word">Word:</label>
+    <input id="word" name="word" type="text" required>
+    <br>
+    <br>
+    <label for="definition">Definition:</label>
+    <input id="definition" name="definition" type="text" required>
+    <hr>
+    <button type="submit" class="btn btn-success">Add Word!</button>
+  </form>
+  <h3>Words:</h3>
   <% @words.each() do |word| %>
-    <li><a href="/word/<%= word.id() %>"><%= word.word() %></a></li>
+  <ul>
+      <li><a href="/word/<%= word.id() %>"><%= word.word() %></a></li>
+  </ul>
   <% end %>
-</ul>
+  <form action="/reset-words" method="post">
+    <button class="btn btn-warning">Clear Words</button>
+  </form>
+</div>

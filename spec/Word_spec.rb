@@ -67,4 +67,14 @@ describe(Words) do
       expect(test_word.definitions()).to(eq([test_definition]))
     end
   end
+
+  describe("#clear_definitions") do
+    it("clears definitions array") do
+      test_word = Words.new({:word => "Fish"})
+      test_definition = Definitions.new({:definition => "an aquatic animal"})
+      test_word.add_definition(test_definition)
+      test_word.clear_definitions()
+      expect(test_word.definitions()).to(eq([]))
+    end
+  end
 end
