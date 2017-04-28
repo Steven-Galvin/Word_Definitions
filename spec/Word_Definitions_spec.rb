@@ -30,4 +30,12 @@ describe(Words) do
       expect(Words.all()).to(eq([test_word]))
     end
   end
+
+  describe(".clear") do
+    it("clears array of words") do
+      test_word = Words.new({:word => "Fish"})
+      test_word.save()
+      expect(Words.clear()).to(eq([]))
+    end
+  end
 end

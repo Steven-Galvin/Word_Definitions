@@ -28,8 +28,11 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
-|Returns user inputted words|"Fish"|"Fish"|
-|Returns the id of a word|"Fish"|1|
+|Returns user inputted words|test_word.word()|"Fish"|
+|Returns the id of a word|test_word.id()|1|
+|Returns an empty array of words|Words.all()|[]|
+|Saves word into array of words|test_word.save() / Words.all()|[test_word]|
+||||
 
 ## Authors
 

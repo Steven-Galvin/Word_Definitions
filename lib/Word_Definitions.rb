@@ -15,4 +15,8 @@ class Words
   define_method(:save) do
     @@words_array.push(self)
   end
+
+  define_singleton_method(:clear) do
+    @@words_array = []
+  end
 end
