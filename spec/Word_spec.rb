@@ -2,6 +2,9 @@ require('rspec')
 require('word')
 
 describe(Words) do
+  before do
+    Words.clear()
+  end
 
   describe('#word') do
     it("returns a user inputted word") do
@@ -13,7 +16,7 @@ describe(Words) do
   describe('#id') do
     it("returns id of a word") do
       test_word = Words.new({:word => "Fish"})
-      expect(test_word.id()).to(eq(1))
+      expect(test_word.id()).to(eq("word1"))
     end
   end
 
@@ -45,7 +48,7 @@ describe(Words) do
       test_word.save()
       test_word2 = Words.new({:word => "Tank"})
       test_word2.save()
-      expect(Words.find(2)).to(eq(test_word2))
+      expect(Words.find(test_word2.id())).to(eq(test_word2))
     end
   end
 

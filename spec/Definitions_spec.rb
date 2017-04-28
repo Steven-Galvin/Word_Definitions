@@ -2,6 +2,9 @@ require('rspec')
 require('definitions')
 
 describe(Definitions) do
+  before do
+    Definitions.clear()
+  end
 
   describe('#definition') do
     it("returns a user inputted definition") do
@@ -13,7 +16,7 @@ describe(Definitions) do
   describe('#id') do
     it("returns id of a definition") do
       test_definition = Definitions.new({:definition => "an aquatic animal"})
-      expect(test_definition.id()).to(eq(1))
+      expect(test_definition.id()).to(eq("definition1"))
     end
   end
 
@@ -45,7 +48,7 @@ describe(Definitions) do
       test_definition.save()
       test_definition2 = Definitions.new({:definition => "a limbless and cold-blooded animal"})
       test_definition2.save()
-      expect(Definitions.find(2)).to(eq(test_definition2))
+      expect(Definitions.find(test_definition2.id())).to(eq(test_definition2))
     end
   end
 end

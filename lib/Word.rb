@@ -5,7 +5,7 @@ class Words
 
   define_method(:initialize) do |attributes|
     @word = attributes.fetch(:word)
-    @id = @@words_array.length().+(1)
+    @id = "word".+((@@words_array.length().+(1)).to_s)
     @definitions = []
   end
 

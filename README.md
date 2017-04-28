@@ -40,6 +40,8 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 |Saves definition into array of definitions|test_definition.save() / Definitions.all()|[test_definition]|
 |Clears an array of definitions|Definitions.clear()|[]|
 |Finds a definition by it's ID|Definitions.find(2)|[test_definition2]|
+|Returns array of definitions within word|test_word.definitions|[]|
+|Adds definitions to words|test_word.add_definition(test_definition) / test_word.definitions|[test_definition]|
 
 ## Authors
 
