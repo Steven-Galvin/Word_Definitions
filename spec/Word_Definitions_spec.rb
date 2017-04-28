@@ -38,4 +38,14 @@ describe(Words) do
       expect(Words.clear()).to(eq([]))
     end
   end
+
+  describe(".find") do
+    it("finds a word in the array by it's id") do
+      test_word = Words.new({:word => "Fish"})
+      test_word.save()
+      test_word2 = Words.new({:word => "Tank"})
+      test_word2.save()
+      expect(Words.find(2)).to(eq(test_word2))
+    end
+  end
 end
