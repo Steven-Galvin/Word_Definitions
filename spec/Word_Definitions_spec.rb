@@ -22,4 +22,12 @@ describe(Words) do
       expect(Words.all()).to(eq([]))
     end
   end
+
+  describe("#save") do
+    it("saves a word into the array of words") do
+      test_word = Words.new({:word => "Fish"})
+      test_word.save()
+      expect(Words.all()).to(eq([test_word]))
+    end
+  end
 end
