@@ -48,4 +48,20 @@ describe(Words) do
       expect(Words.find(2)).to(eq(test_word2))
     end
   end
+
+  describe("#definitions") do
+    it("returns an array of definitions") do
+      test_word = Words.new({:word => "Fish"})
+      expect(test_word.definitions()).to(eq([]))
+    end
+  end
+
+  describe("#add_definition") do
+    it("adds definition into definitions array") do
+      test_word = Words.new({:word => "Fish"})
+      test_definition = Definitions.new({:definition => "an aquatic animal"})
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions()).to(eq([test_definition]))
+    end
+  end
 end
