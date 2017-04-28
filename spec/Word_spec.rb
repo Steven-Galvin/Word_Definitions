@@ -1,5 +1,5 @@
 require('rspec')
-require('word_definitions')
+require('word')
 
 describe(Words) do
 
