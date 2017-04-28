@@ -29,6 +29,7 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
 |Returns user inputted words|"Fish"|"Fish"|
+|Returns the id of a word|"Fish"|1|
 
 ## Authors
 

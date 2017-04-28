@@ -16,4 +16,10 @@ describe(Words) do
       expect(test_word.id()).to(eq(1))
     end
   end
+
+  describe(".all") do
+    it("returns an empty array") do
+      expect(Words.all()).to(eq([]))
+    end
+  end
 end
