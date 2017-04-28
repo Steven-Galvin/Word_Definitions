@@ -32,7 +32,14 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 |Returns the id of a word|test_word.id()|1|
 |Returns an empty array of words|Words.all()|[]|
 |Saves word into array of words|test_word.save() / Words.all()|[test_word]|
-||||
+|Clears an array of words|Words.clear()|[]|
+|Finds a word by it's ID|Words.find(2)|[test_word2]|
+|Returns user inputted definitions|test_definition.definition()|"Fish"|
+|Returns the id of a definition|test_definition.id()|1|
+|Returns an empty array of definitions|Definitions.all()|[]|
+|Saves definition into array of definitions|test_definition.save() / Definitions.all()|[test_definition]|
+|Clears an array of definitions|Definitions.clear()|[]|
+|Finds a definition by it's ID|Definitions.find(2)|[test_definition2]|
 
 ## Authors
 
